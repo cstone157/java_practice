@@ -28,7 +28,11 @@ class Euclid{
             }
 
             r = m % n;
-            m = m / n;
+            if (r == 0)
+                break;
+
+            m = n;
+            n = r;
 
             System.out.println("m = " + m + ", \t\tn = " + n + ", \t\tr = " + r);
         }

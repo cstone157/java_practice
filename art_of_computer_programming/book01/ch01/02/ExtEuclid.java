@@ -36,7 +36,7 @@ class ExtEuclid{
         
         // while r is greater than 0
         while (r > 0) {
-            System.out.println("a = " + a[0] + "\ta' = " + a[1] + "\tb = " + b[0] + "\tb' = " + b[1] + "\tm = " + m + "\tn = " + n + "\tc = " + c + "\td = " + d + "\tq = " + q + "\tr = " + r);
+            System.out.println("a' = " + a[1] + "\ta = " + a[0] + "\tb' = " + b[1] + "\tb = " + b[0] + "\tc = " + c + "\td = " + d + "\tq = " + q + "\tr = " + r);
             c = d;
             d = r;
             int t = a[1];
@@ -51,10 +51,18 @@ class ExtEuclid{
                 m = n;
                 n = tmp;
             }
+
             r = m % n;
-            m = m / n;
+
+            if (r == 0)
+                break;
+
+            m = n;
+            n = r;
         }
 
+        System.out.println(" ============================================ ");
+        System.out.println("a' = " + a[1] + "\ta = " + a[0] + "\tb' = " + b[1] + "\tb = " + b[0] + "\tc = " + c + "\td = " + d + "\tq = " + q + "\tr = " + r);
         System.out.println("Greatest Common Divisor = " + d);
         System.out.println("m = " + m);
         System.out.println("n = " + n);
