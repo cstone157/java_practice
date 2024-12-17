@@ -4,7 +4,7 @@ import java.util.Random;
  *      Given two positive integers m and n, find their greatest common divisor, 
  * that is, the largest positive ingeter that evenly divides both m and n.
  */
-class euclid{
+class Euclid{
     /**
      * Main
      */
@@ -12,8 +12,10 @@ class euclid{
         // create instance of Random class
         Random rand = new Random();
 
-        int m = rand.nextInt(10000);
-        int n = rand.nextInt(10000);
+        //int m = rand.nextInt(10000);
+        //int n = rand.nextInt(10000);
+        int m = 1769;
+        int n = 551;
 
         System.out.println("m = " + m + ", \t\tn = " + n);
 
@@ -25,8 +27,7 @@ class euclid{
                 n = tmp;
             }
 
-            System.out.println("m = " + m + ", \t\tn = " + n);
-                r = m % n;
+            r = m % n;
             m = m / n;
 
             System.out.println("m = " + m + ", \t\tn = " + n + ", \t\tr = " + r);
